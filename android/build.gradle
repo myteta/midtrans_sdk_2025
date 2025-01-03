@@ -8,7 +8,8 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        // Perbarui AGP ke versi terbaru
+        classpath 'com.android.tools.build:gradle:8.1.0'
     }
 }
 
@@ -23,10 +24,18 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 33
+    // Tambahkan namespace
+    namespace "dev.tomykho.midtrans_sdk" // Sesuaikan dengan package modul
+    compileSdk 35 // Tingkatkan ke compileSdk 35
 
     defaultConfig {
         minSdkVersion 21
+        targetSdk 35 // Sesuaikan target SDK
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
