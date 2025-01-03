@@ -1,4 +1,5 @@
-group 'dev.tomykho.midtrans_sdk'
+// group 'dev.tomykho.midtrans_sdk'
+group 'com.example.platmerah'
 version '1.0'
 
 buildscript {
